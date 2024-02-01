@@ -1,3 +1,4 @@
+# Gold Extraction Modeling
 ## Project Overview
 In this project, the goal is to refine parameters for optimal extraction and purification of gold ore, given inputs and outputs of various stages of the process. This project is completed without the understanding of the exact intricacies of mining, extraction, and purification.
 ## Installation and Setup
