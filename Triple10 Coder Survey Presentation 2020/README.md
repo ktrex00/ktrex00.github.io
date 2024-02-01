@@ -1,4 +1,4 @@
-# Yandex Data Careers 2020 Readme:
+# Yandex Data Careers 2020
 ## Project Overview
 This project is focused on analyzing survey data from three code education websites, with an intent to describe the demographics of the field in 2020. Survey results are cleaned, transformed, and set into visuals with interpretation for the reader.
 ## Installation and Setup
