@@ -1,2 +1,9 @@
 # Katie Leatherman Data Science Portfolio
-Contained in this repository are various previous data science projects I have worked on.
+
+## About me
+I am a person working on a data science degree
+
+## Work/Projects
+
+## Contact me
+Please send emails to ktleatherman@gmail.com. I look forward to chatting with you!
