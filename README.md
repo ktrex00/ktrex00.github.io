@@ -4,11 +4,10 @@
 
 With the speed that technology, machine learning, and AI are improving and expanding, many fields are at risk of being left behind. A wide range of industries can benefit from these tools, if they only had the access. I aim to harness this power to magnify your manpower and allow for more innovation.
 
----
-
-
 
 ## Portfolio Work
+- [Gold Extraction Modeling](/Gold%20Extraction%20Modeling%202020/README.md)
+- [2020 Coder Survey](/Triple10%20Coder%20Survey%20Presentation%202020/README.md)
 
 ## About Me
 
