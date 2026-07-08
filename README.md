@@ -1,4 +1,4 @@
-![header](https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=200&section=header&text=Leveraging%20Data%20Science-nl-and%20Technology&fontSize=60&stroke=286479&strokeWidth=2)
+![header](https://capsule-render.vercel.app/api?type=waving&height=300&color=gradient&text=From%20🐟︎%20to%20α&textBg=false&fontAlign=50&fontAlignY=31&strokeWidth=2&animation=fadeIn&desc=Making%20a%20splash%20in%20animal%20conservation%20data%20science&descAlignY=50)
 
 With the speed that technology, machine learning, and AI are improving and expanding, many fields are at risk of being left behind. A wide range of industries can benefit from these tools, if they only had the access. I aim to harness this power to magnify your manpower and allow for more innovation.
 
