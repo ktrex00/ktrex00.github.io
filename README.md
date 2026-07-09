@@ -1,4 +1,4 @@
-![header](https://capsule-render.vercel.app/api?type=waving&height=300&color=gradient&text=From%20🐟︎%20to%20α&textBg=false&fontAlign=50&fontAlignY=31&strokeWidth=2&animation=fadeIn&desc=Making%20a%20splash%20in%20animal%20conservation%20data%20science&descAlignY=50)
+![header](https://capsule-render.vercel.app/api?type=waving&height=300&color=gradient&customColorList=2,12,19,21,22,18,20,27&text=From%20%F0%9F%90%9F%EF%B8%8E%20to%20%CE%B1&desc=Making%20a%20splash%20in%20conservation%20and%20data%20science&fontAlign=50&fontAlignY=28&stroke=00B8E3&fontColor00000&textBg=false)
 
 
 ## Portfolio Work
