@@ -3,9 +3,8 @@
 
 ## Portfolio Work
 
-- [Examining the Best Hockey Teams](/Hockey Report/README.md)
-- [Gold Extraction Modeling](/Gold%20Extraction%20Modeling%202020/README.md)
-- [2020 Coder Survey](/Triple10%20Coder%20Survey%20Presentation%202020/README.md)
+- [Smartsheet Appointment Tracking System](/Appointment Tracking System/README.md)
+
 
 ## About Me
 
