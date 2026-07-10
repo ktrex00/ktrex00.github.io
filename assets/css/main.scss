@@ -11,13 +11,10 @@
 }
 .banner-image {
   display: block;
+  width: 100%;
   height: auto;
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  margin-left: -50vw;
 }
-.splash {
+.content-narrow {
   max-width: 700px;
   margin: 0 auto;
 }
