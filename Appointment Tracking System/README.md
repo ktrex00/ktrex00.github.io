@@ -2,9 +2,9 @@
 
 ## Project Overview
 
-This project was designed and implemented by myself in response to a business need. Specific details are not available due to company propriety. 
+This project was designed and implemented by myself in response to a business need. Specific details are not available due to company propriety.
 
-Our business sector needed an updated method of recording completed events, and ensuring that they were scheduled to happen in the future. This required the coordination of a few different teams and was previously kept in an Excel sheet that served more as a note sheet than a database of information. Dates were confused, notes were not present, and projects that were no longer relevant remained on the sheet. Going forward, there needed to be a clear system of retrieving the most recent appointments for each project, in case records needed to be pulled for an outside party. 
+Our business sector needed an updated method of recording completed events, and ensuring that they were scheduled to happen in the future. This required the coordination of a few different teams and was previously kept in an Excel sheet that served more as a note sheet than a database of information. Dates were confused, notes were not present, and projects that were no longer relevant remained on the sheet. Going forward, there needed to be a clear system of retrieving the most recent appointments for each project, in case records needed to be pulled for an outside party.
 
 ## Proposed Solution
 
@@ -22,6 +22,8 @@ After more discussions, Smartsheets was presented as the preferred option, due t
   - One sheet served as a library to help determine when the next appointment would be needed, based on the various aspects of the recorded appointment. This sheet took into account multiple appointment schedules based on the type of project and involved redundancies for situations not expressly described.
 
 To ensure that the system would be easy to use for anyone not familiar with Smartsheets, automatic forms were created for the Primary Listing and Appointment Records sheets.
+
+![1783645279243](image/README/1783645279243.png)
 
 ## Automation
 
