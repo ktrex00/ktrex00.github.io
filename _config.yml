@@ -1,4 +1,5 @@
 author: Katie Leatherman
 title: Katie Leatherman
-plugins: - jekyll-remote-theme
-remote_theme: minimal-mistakes
+plugins: 
+  - jekyll-remote-theme
+remote_theme: mmistakes/minimal-mistakes
