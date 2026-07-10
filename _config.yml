@@ -6,4 +6,4 @@ plugins:
   - jekyll-feed
   - jekyll-gist
 remote_theme: "mmistakes/minimal-mistakes"
-minimal_mistakes_skin: "dirt"
+minimal_mistakes_skin: "air"
