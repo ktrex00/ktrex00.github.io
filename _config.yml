@@ -2,4 +2,7 @@ author: Katie Leatherman
 title: Katie Leatherman
 plugins: 
   - jekyll-remote-theme
-remote_theme: mmistakes/minimal-mistakes
+  - jekyll-include-cache
+  - jekyll-feed
+  - jekyll-gist
+remote_theme: "mmistakes/minimal-mistakes"
