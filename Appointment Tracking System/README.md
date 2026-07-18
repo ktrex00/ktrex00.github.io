@@ -1,9 +1,9 @@
 ---
 layout: single
+title: Appointment Tracking System Project
 hide_masthead: true
 ---
 
-# Appointment Tracking System Project
 
 ## Project Overview
 
