@@ -4,7 +4,7 @@
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
 @import "minimal-mistakes";
 .site-title {
-  font-size: 1em;
+  font-size: .7em;
 }
 .layout--splash .masthead {
   display: none;
