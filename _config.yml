@@ -7,3 +7,8 @@ plugins:
   - jekyll-gist
 remote_theme: "mmistakes/minimal-mistakes"
 minimal_mistakes_skin: "air"
+
+collections:
+  portfolio:
+    output: true
+    permalink: /:collection/:path/
