@@ -33,6 +33,12 @@ html {
   transition: opacity 0.3s ease;
 }
 
+.portfolio-image-wrap img {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+}
+
 .portfolio-overlay {
   position: absolute;
   top: 0;
