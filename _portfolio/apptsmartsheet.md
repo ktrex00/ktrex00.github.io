@@ -5,8 +5,6 @@ header:
     teaser: /assets/images/apptsmartsheet-teaser.jpg
 ---
 
-
-
 ## Project Overview
 
 This project was designed and implemented by myself in response to a business need. Specific details are not available due to company propriety.

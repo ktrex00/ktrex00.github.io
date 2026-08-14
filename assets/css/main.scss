@@ -1,23 +1,52 @@
----
----
-
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
+--- --- @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
 @import "minimal-mistakes";
+
 .site-title {
   font-size: 1.2em;
 }
+
 .layout--splash .masthead {
   display: none;
 }
+
 .banner-image {
   display: block;
   width: 100%;
   height: auto;
 }
+
 .content-narrow {
   max-width: 700px;
   margin: 0 auto;
 }
+
 html {
   font-size: 85%;
+}
+
+.portfolio-image-wrap {
+  position: relative;
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+  border: 5px solid #00B8E3;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio-image-wrap: hover .portfolio-overlay {
+  opacity: 1;
 }

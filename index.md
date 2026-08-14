@@ -12,7 +12,12 @@ permalink: /
 {% for project in site.portfolio %}
     <div class="portfolio-item">
         {% if project.header.teaser %}
-            <img src="{{ project.header.teaser }}" alt="{{ project.title }}">
+            <div class="portfolio-image-wrap">
+                <img src="{{ project.header.teaser}}" alt="{{ project.title }}" style="border: 5px solid #00B8E3;">
+                <div class="portfolio-overlay">
+                    <span>{{ project.title }}</span>
+                </div>
+            </div>
         {% endif %}
         <h3>{{ project.title  }}</h3>
         <p>{{ project.excerpt }}</p>
