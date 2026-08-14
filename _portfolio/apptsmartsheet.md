@@ -1,8 +1,8 @@
 ---
 title: "Smartsheet Scheduling System"
 excerpt: "A data management system created to manage and track upcoming appointments."
-# header:
-#   teaser: /assets/images/apptsmartsheet-teaser.png
+header:
+  teaser: /assets/images/apptsmartsheet-teaser.jpg
 ---
 
 
@@ -39,3 +39,7 @@ A large draw of using Smartsheets was the automation and interface with Microsof
 ## Implementation
 
 The new system was deployed and has worked efficiently. Bugs were limited primarily to users adding projects outside of the workflow automation. The system has been incorporated into the operating guidelines of the team, and is used on a regular basis by the primary team and used for reference for secondary teams.
+
+---
+
+*Photo by [Gaining Visuals](https://unsplash.com/@gainingvisuals) on [Unsplash](https://unsplash.com/photos/wKu5yvAT0bg)*
