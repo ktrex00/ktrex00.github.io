@@ -2,7 +2,7 @@
 title: "Smartsheet Scheduling System"
 excerpt: "A data management system created to manage and track upcoming appointments."
 header:
-  teaser: /assets/images/apptsmartsheet-teaser.jpg
+    teaser: /assets/images/apptsmartsheet-teaser.jpg
 ---
 
 
