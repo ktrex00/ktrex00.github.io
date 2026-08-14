@@ -42,4 +42,3 @@ Upon learning about the field of Data Science, I realized that my knack for stat
 ## Contact me
 
 Please send emails to ktleatherman@gmail.com. I look forward to chatting with you!
-</div>
