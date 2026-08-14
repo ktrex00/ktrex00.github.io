@@ -1,10 +1,10 @@
 ---
 title: "Smartsheet Scheduling System"
+layout: single
 excerpt: "A data management system created to manage and track upcoming appointments."
 header:
     teaser: /assets/images/apptsmartsheet-teaser.jpg
 ---
-
 ## Project Overview
 
 This project was designed and implemented by myself in response to a business need. Specific details are not available due to company propriety.
@@ -28,7 +28,7 @@ After more discussions, Smartsheets was presented as the preferred option, due t
 
 To ensure that the system would be easy to use for anyone not familiar with Smartsheets, automatic forms were created for the Primary Listing and Appointment Records sheets.
 
-![1783645279243](image/README/1783645279243.png)
+![1786738831084](image/apptsmartsheet/1786738831084.png)
 
 ## Automation
 
@@ -40,4 +40,4 @@ The new system was deployed and has worked efficiently. Bugs were limited primar
 
 ---
 
-*Photo by [Gaining Visuals](https://unsplash.com/@gainingvisuals) on [Unsplash](https://unsplash.com/photos/wKu5yvAT0bg)*
+*Teaser photo by [Gaining Visuals](https://unsplash.com/@gainingvisuals) on [Unsplash](https://unsplash.com/photos/wKu5yvAT0bg)*

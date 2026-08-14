@@ -19,8 +19,8 @@ permalink: /
                     <span><a href="{{ project.url }}"><b>{{ project.title }}</b></a></span>
                 </div>
             </div>
+            <p>{{ project.excerpt }}</p>
         {% endif %}
-        <p>{{ project.excerpt }}</p>
     </div>
 {% endfor %}
 </div>
