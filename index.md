@@ -14,7 +14,7 @@ permalink: /
     <div class="portfolio-item">
         {% if project.header.teaser %}
             <div class="portfolio-image-wrap">
-                <img src="{{ project.header.teaser}}" alt="{{ project.title }}">
+                <img src="{{ project.header.teaser}}" alt="{{ project.title}}">
                 <div class="portfolio-overlay">
                     <span><a href="{{ project.url }}"><b>{{ project.title }}</b></a></span>
                 </div>
