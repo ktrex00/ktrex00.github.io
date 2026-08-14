@@ -8,6 +8,7 @@ permalink: /
 
 
 ## Portfolio Work
+
 <div class="portfolio-grid">
 {% for project in site.portfolio %}
     <div class="portfolio-item">
