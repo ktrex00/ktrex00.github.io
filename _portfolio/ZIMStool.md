@@ -4,7 +4,7 @@ title: "ZIMS Program Conversion Tool"
 excerpt: "A hand-coded program to clean data and present it in a useable, familiar Excel format."
 hide_masthead: true
 header:
-    teaser-image: assets\images\ZIMStool-crop.png
+    teaser-image: /assets/images/ZIMStool-crop.png
 ---
 
 ## Overview
