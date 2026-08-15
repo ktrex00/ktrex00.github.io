@@ -28,7 +28,7 @@ After more discussions, Smartsheets was presented as the preferred option, due t
 
 To ensure that the system would be easy to use for anyone not familiar with Smartsheets, automatic forms were created for the Primary Listing and Appointment Records sheets.
 
-![1786738831084](image/apptsmartsheet/1786738831084.png)
+![smartsheetlayout](assets\images\smartsheetlayout.png)
 
 ## Automation
 
