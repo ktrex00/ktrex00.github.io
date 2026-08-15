@@ -15,4 +15,4 @@ Our team uses a few key metrics to provide a snapshot of an animal's current beh
 
 As I found that the excel outputs from ZIMS were consistent, but did not fit our needs, I created a pipeline to clean the data into a format that was more familiar and easier to manipulate than the raw output. This allowed my team to quickly convert data from ZIMS into a form that they were familiar with, saving hours of work per person spent on sorting through data by hand.
 
-![1786805018023](image/ZIMStool/1786805018023.png)
+![1786805018023](assets\images\ZIMStool.png)

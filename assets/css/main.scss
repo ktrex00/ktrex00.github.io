@@ -61,11 +61,17 @@ html {
 }
 
 .portfolio-item {
-  width: 150px;
+  width: 100%;
 }
 
 .portfolio-excerpt {
   font-size: 0.85em;
   width: 150px;
   overflow-wrap: break-word;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
