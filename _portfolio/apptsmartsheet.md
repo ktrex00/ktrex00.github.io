@@ -4,6 +4,7 @@ layout: single
 excerpt: "A data management system created to manage and track upcoming appointments."
 header:
     teaser: /assets/images/apptsmartsheet-teaser.jpg
+published: False
 ---
 ## Project Overview
 
