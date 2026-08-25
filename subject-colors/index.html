@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="./favicon.ico" />
+    <!-- Preload is necessary because we show these images when we disconnect from the server,
+    but at that point we cannot load these images from the server -->
+    <link rel="preload" href="./assets/gradient-yHQUC_QB.png" as="image" />
+    <link rel="preload" href="./assets/noise-60BoTA8O.png" as="image" />
+    <!-- Preload the fonts -->
+    <link rel="preload" href="./assets/Lora-VariableFont_wght-CZceb_kH.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="./assets/PTSans-Regular-Bam3NpBI.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="./assets/PTSans-Bold-C_DwAp7Z.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="./assets/FiraMono-Regular-CEsLFVD9.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="./assets/FiraMono-Medium-D5MAsWEG.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="./assets/FiraMono-Bold-C6PDArdf.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="a marimo app" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <link rel="manifest" href="./manifest.json" />
+
+    <script data-marimo="true">
+      function __resizeIframe(obj) {
+        const scrollbarHeight = 20; // Max between windows, mac, and linux
+
+        function setHeight() {
+          // Guard against race condition where iframe isn't ready
+          if (!obj.contentWindow?.document?.documentElement) {
+            return;
+          }
+          const element = obj.contentWindow.document.documentElement;
+          // If there is no vertical scrollbar, we don't need to resize the iframe
+          if (element.scrollHeight === element.clientHeight) {
+            return;
+          }
+
+          // Create a new height that includes the scrollbar height if it's visible
+          const hasHorizontalScrollbar = element.scrollWidth > element.clientWidth;
+          const newHeight = element.scrollHeight + (hasHorizontalScrollbar ? scrollbarHeight : 0);
+
+          // Only update the height if it's different from the current height
+          if (obj.style.height !== `${newHeight}px`) {
+            obj.style.height = `${newHeight}px`;
+          }
+        }
+
+        // Resize the iframe to the height of the content and bottom scrollbar height
+        setHeight();
+
+        // Resize the iframe when the content changes
+        const resizeObserver = new ResizeObserver((_entries) => {
+          setHeight();
+        });
+        // Only observe if iframe content is ready
+        if (obj.contentWindow?.document?.body) {
+          resizeObserver.observe(obj.contentWindow.document.body);
+        }
+      }
+    </script>
+    <marimo-filename hidden>notebook.py</marimo-filename>
+    <!-- TODO(Trevor): Legacy, required by VS Code plugin. Remove when plugin is updated (see marimo/server/_templates/template.py) -->
+    <marimo-version data-version="{{ version }}" hidden></marimo-version>
+    <marimo-user-config data-config="{{ user_config }}" hidden></marimo-user-config>
+    <marimo-server-token data-token="{{ server_token }}" hidden></marimo-server-token>
+    <!-- /TODO -->
+    <title>notebook</title>
+    <script type="module" crossorigin src="./assets/index-C5WESBbZ.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/preload-helper-BPPi7vOr.js">
+    <link rel="modulepreload" crossorigin href="./assets/objects-CrbstYTV.js">
+    <link rel="modulepreload" crossorigin href="./assets/chunk-C4rtOYze.js">
+    <link rel="modulepreload" crossorigin href="./assets/react-C60yClUi.js">
+    <link rel="modulepreload" crossorigin href="./assets/compiler-runtime-DnimoHo0.js">
+    <link rel="modulepreload" crossorigin href="./assets/jsx-runtime-3wZU7vFS.js">
+    <link rel="modulepreload" crossorigin href="./assets/useEventListener-DpNnLPuE.js">
+    <link rel="modulepreload" crossorigin href="./assets/defaultLocale-CGJY8D9C.js">
+    <link rel="modulepreload" crossorigin href="./assets/precisionRound-DQz5N1zm.js">
+    <link rel="modulepreload" crossorigin href="./assets/defaultLocale-DzliDDTm.js">
+    <link rel="modulepreload" crossorigin href="./assets/vega-loader.browser-DLY285WP.js">
+    <link rel="modulepreload" crossorigin href="./assets/tooltip-BUmTS76K.js">
+    <link rel="modulepreload" crossorigin href="./assets/clsx-Dz_KRrWq.js">
+    <link rel="modulepreload" crossorigin href="./assets/cn-DCUzRj2J.js">
+    <link rel="modulepreload" crossorigin href="./assets/badge-D28DMr4y.js">
+    <link rel="modulepreload" crossorigin href="./assets/button-W__YVea9.js">
+    <link rel="modulepreload" crossorigin href="./assets/react-dom-Ba2zmJWD.js">
+    <link rel="modulepreload" crossorigin href="./assets/fullscreen-CrevbcR_.js">
+    <link rel="modulepreload" crossorigin href="./assets/menu-items-B8lIBnFI.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-CFnrytEJ.js">
+    <link rel="modulepreload" crossorigin href="./assets/createLucideIcon-B8oVfJNp.js">
+    <link rel="modulepreload" crossorigin href="./assets/check-CyyJPf_5.js">
+    <link rel="modulepreload" crossorigin href="./assets/x-4y-nyVDU.js">
+    <link rel="modulepreload" crossorigin href="./assets/select-CPo-KTTe.js">
+    <link rel="modulepreload" crossorigin href="./assets/tooltip-C9LWGQ7Y.js">
+    <link rel="modulepreload" crossorigin href="./assets/use-toast-DjpWVza6.js">
+    <link rel="modulepreload" crossorigin href="./assets/useEvent-GCVIknuR.js">
+    <link rel="modulepreload" crossorigin href="./assets/invariant-BUdrueMv.js">
+    <link rel="modulepreload" crossorigin href="./assets/isObject-DvLSfCY5.js">
+    <link rel="modulepreload" crossorigin href="./assets/isArrayLikeObject-Dqg6_6m7.js">
+    <link rel="modulepreload" crossorigin href="./assets/_initCloneObject-7OOScFCJ.js">
+    <link rel="modulepreload" crossorigin href="./assets/merge-BK1opWhR.js">
+    <link rel="modulepreload" crossorigin href="./assets/zod-BIDX-mZr.js">
+    <link rel="modulepreload" crossorigin href="./assets/utils-C8Yt16Y7.js">
+    <link rel="modulepreload" crossorigin href="./assets/constants-DifUxsbZ.js">
+    <link rel="modulepreload" crossorigin href="./assets/session-D-SddyN0.js">
+    <link rel="modulepreload" crossorigin href="./assets/Deferred-CP7vq682.js">
+    <link rel="modulepreload" crossorigin href="./assets/config-EoJoeZuK.js">
+    <link rel="modulepreload" crossorigin href="./assets/uuid-e9lSomwA.js">
+    <link rel="modulepreload" crossorigin href="./assets/DeferredRequestRegistry-6TRSC3VZ.js">
+    <link rel="modulepreload" crossorigin href="./assets/requests-B9zEd_sW.js">
+    <link rel="modulepreload" crossorigin href="./assets/useLifecycle-DDwuYzlC.js">
+    <link rel="modulepreload" crossorigin href="./assets/useNonce-C2dwX-sI.js">
+    <link rel="modulepreload" crossorigin href="./assets/useTheme-CwCyrmDf.js">
+    <link rel="modulepreload" crossorigin href="./assets/arrays-UzzAzxsG.js">
+    <link rel="modulepreload" crossorigin href="./assets/strings-DmKKoXrM.js">
+    <link rel="modulepreload" crossorigin href="./assets/once-DNBWPkeJ.js">
+    <link rel="modulepreload" crossorigin href="./assets/capabilities-CHeZxy51.js">
+    <link rel="modulepreload" crossorigin href="./assets/createReducer-C1MhlItJ.js">
+    <link rel="modulepreload" crossorigin href="./assets/paths-D5zczhUD.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-CeF1Em5L.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-Di6rD-vJ.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-DanVWUek.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-BVNaV53g.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-BrqkjqDe.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-5bwTcyKs.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-BPoMypmC.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-Bm9PT5P9.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-BbqPy6oS.js">
+    <link rel="modulepreload" crossorigin href="./assets/stex-BGrE-q7N.js">
+    <link rel="modulepreload" crossorigin href="./assets/toDate-QOk09NqD.js">
+    <link rel="modulepreload" crossorigin href="./assets/purify.es-Bwm8T4QC.js">
+    <link rel="modulepreload" crossorigin href="./assets/cjs-DCKmcMBz.js">
+    <link rel="modulepreload" crossorigin href="./assets/isSymbol-BT6B8Bon.js">
+    <link rel="modulepreload" crossorigin href="./assets/now-CsYTPAhW.js">
+    <link rel="modulepreload" crossorigin href="./assets/debounce-DhnxH9Rh.js">
+    <link rel="modulepreload" crossorigin href="./assets/database-zap-n8PGHE18.js">
+    <link rel="modulepreload" crossorigin href="./assets/cells-DTFqEQb0.js">
+    <link rel="modulepreload" crossorigin href="./assets/kbd-PEowR7op.js">
+    <link rel="modulepreload" crossorigin href="./assets/useInstallPackage-D58nBaNf.js">
+    <link rel="modulepreload" crossorigin href="./assets/alert-dialog-D_kB5FIu.js">
+    <link rel="modulepreload" crossorigin href="./assets/dialog-WU4x2UpK.js">
+    <link rel="modulepreload" crossorigin href="./assets/useDebounce-BlgD22u_.js">
+    <link rel="modulepreload" crossorigin href="./assets/numbers-DtSpUdpO.js">
+    <link rel="modulepreload" crossorigin href="./assets/SSRProvider-CouFQxI2.js">
+    <link rel="modulepreload" crossorigin href="./assets/context-BJMN4ll3.js">
+    <link rel="modulepreload" crossorigin href="./assets/useNumberFormatter-xxZlcf11.js">
+    <link rel="modulepreload" crossorigin href="./assets/usePress-Bl6X9B5M.js">
+    <link rel="modulepreload" crossorigin href="./assets/input-BN98e517.js">
+    <link rel="modulepreload" crossorigin href="./assets/ImperativeModal-Dxj31V4A.js">
+    <link rel="modulepreload" crossorigin href="./assets/cell-link-D26WjdN1.js">
+    <link rel="modulepreload" crossorigin href="./assets/config-DjP9S1hr.js">
+    <link rel="modulepreload" crossorigin href="./assets/alert-CHWQT4zh.js">
+    <link rel="modulepreload" crossorigin href="./assets/chevron-right-C9ZBG6Lx.js">
+    <link rel="modulepreload" crossorigin href="./assets/dropdown-menu-DWGvf_Bw.js">
+    <link rel="modulepreload" crossorigin href="./assets/links-BeU4kHTI.js">
+    <link rel="modulepreload" crossorigin href="./assets/useRunCells-BpZ_0Xuz.js">
+    <link rel="modulepreload" crossorigin href="./assets/copy-HCSOwOwk.js">
+    <link rel="modulepreload" crossorigin href="./assets/copy-DlR5UiIE.js">
+    <link rel="modulepreload" crossorigin href="./assets/copy-icon-Cn8LzPNx.js">
+    <link rel="modulepreload" crossorigin href="./assets/RenderHTML-X9kskQZ0.js">
+    <link rel="modulepreload" crossorigin href="./assets/datasource-DZgUyqAK.js">
+    <link rel="modulepreload" crossorigin href="./assets/state-ByxLiTvP.js">
+    <link rel="modulepreload" crossorigin href="./assets/hat-glasses-xLTnAC_n.js">
+    <link rel="modulepreload" crossorigin href="./assets/package-ROei-DG7.js">
+    <link rel="modulepreload" crossorigin href="./assets/sparkles-DwqcWrJl.js">
+    <link rel="modulepreload" crossorigin href="./assets/MarimoErrorOutput-BVdFtnJz.js">
+    <link rel="modulepreload" crossorigin href="./assets/ErrorBoundary-B392qglD.js">
+    <link rel="modulepreload" crossorigin href="./assets/eye-off-DfXRjba3.js">
+    <link rel="modulepreload" crossorigin href="./assets/refresh-cw-DPUCy0Ep.js">
+    <link rel="modulepreload" crossorigin href="./assets/tree-actions-DUAdNn1i.js">
+    <link rel="modulepreload" crossorigin href="./assets/spinner-Cj3eM5bt.js">
+    <link rel="modulepreload" crossorigin href="./assets/html-to-image-BsXiWo0v.js">
+    <link rel="modulepreload" crossorigin href="./assets/focus-BTlyH5K_.js">
+    <link rel="modulepreload" crossorigin href="./assets/useAsyncData-BcvSvTUt.js">
+    <link rel="modulepreload" crossorigin href="./assets/LazyAnyLanguageCodeMirror-DUvRReKp.js">
+    <link rel="modulepreload" crossorigin href="./assets/micromark-factory-space-D4wN6pqE.js">
+    <link rel="modulepreload" crossorigin href="./assets/chunk-5FQGJX7Z-B4N_BMo6.js">
+    <link rel="modulepreload" crossorigin href="./assets/markdown-renderer-BjuEVUOa.js">
+    <link rel="modulepreload" crossorigin href="./assets/command-D5LtSvbN.js">
+    <link rel="modulepreload" crossorigin href="./assets/field-BPfggvql.js">
+    <link rel="modulepreload" crossorigin href="./assets/popover-B96fOqfH.js">
+    <link rel="modulepreload" crossorigin href="./assets/errors-D93OkQw8.js">
+    <link rel="modulepreload" crossorigin href="./assets/download-_oAlkvj6.js">
+    <link rel="modulepreload" crossorigin href="./assets/table-xPvP31p3.js">
+    <link rel="modulepreload" crossorigin href="./assets/useIframeCapabilities-DBacdN1t.js">
+    <link rel="modulepreload" crossorigin href="./assets/error-banner-d0-XOKtd.js">
+    <link rel="modulepreload" crossorigin href="./assets/formats-CydJsDOc.js">
+    <link rel="modulepreload" crossorigin href="./assets/utils-Y4n-X10o.js">
+    <link rel="modulepreload" crossorigin href="./assets/en-US-orJ4dPbF.js">
+    <link rel="modulepreload" crossorigin href="./assets/isValid-BmtlFqSa.js">
+    <link rel="modulepreload" crossorigin href="./assets/dates-CZTDC2tF.js">
+    <link rel="modulepreload" crossorigin href="./assets/extends-BiFDv3jB.js">
+    <link rel="modulepreload" crossorigin href="./assets/emotion-is-prop-valid.esm-C59xfSYt.js">
+    <link rel="modulepreload" crossorigin href="./assets/useDateFormatter-Cxnn3tJh.js">
+    <link rel="modulepreload" crossorigin href="./assets/react-icons.esm-CsgEZOQ_.js">
+    <link rel="modulepreload" crossorigin href="./assets/RSPContexts-oeZyXDWd.js">
+    <link rel="modulepreload" crossorigin href="./assets/table-FVnUU4--.js">
+    <link rel="modulepreload" crossorigin href="./assets/ellipsis-CUbXmdb-.js">
+    <link rel="modulepreload" crossorigin href="./assets/external-link-C8y9rFms.js">
+    <link rel="modulepreload" crossorigin href="./assets/message-circle-DJwyqZtq.js">
+    <link rel="modulepreload" crossorigin href="./assets/plus-r1QITpsJ.js">
+    <link rel="modulepreload" crossorigin href="./assets/trash-2-BLxp8uxj.js">
+    <link rel="modulepreload" crossorigin href="./assets/react-resizable-panels.browser.esm-CLaR27oP.js">
+    <link rel="modulepreload" crossorigin href="./assets/JsonOutput-DnrBQBRT.js">
+    <link rel="modulepreload" crossorigin href="./assets/chart-no-axes-column-eb23KpAk.js">
+    <link rel="modulepreload" crossorigin href="./assets/square-function-ypIvDL4C.js">
+    <link rel="modulepreload" crossorigin href="./assets/spec-NeCHOv2Z.js">
+    <link rel="modulepreload" crossorigin href="./assets/column-preview-BLap3eAk.js">
+    <link rel="modulepreload" crossorigin href="./assets/icons-BwSNDWAP.js">
+    <link rel="modulepreload" crossorigin href="./assets/radio-group-5KDs5aO1.js">
+    <link rel="modulepreload" crossorigin href="./assets/floating-outline-Vqr5D17R.js">
+    <link rel="modulepreload" crossorigin href="./assets/switch-CDT2KH2g.js">
+    <link rel="modulepreload" crossorigin href="./assets/objectWithoutPropertiesLoose-DfWeGRFv.js">
+    <link rel="modulepreload" crossorigin href="./assets/esm-RBKN8Dn2.js">
+    <link rel="modulepreload" crossorigin href="./assets/readonly-python-code-BV8otm7e.js">
+    <link rel="modulepreload" crossorigin href="./assets/file-headphone-BjKz3ZV1.js">
+    <link rel="modulepreload" crossorigin href="./assets/file-BjlLTeSV.js">
+    <link rel="modulepreload" crossorigin href="./assets/image-Dvcyi0uu.js">
+    <link rel="modulepreload" crossorigin href="./assets/file-icons-V3puz20c.js">
+    <link rel="modulepreload" crossorigin href="./assets/events-CPoJAfgx.js">
+    <link rel="modulepreload" crossorigin href="./assets/share-c5Zh8BM8.js">
+    <link rel="modulepreload" crossorigin href="./assets/blob-BKW9TqBu.js">
+    <link rel="modulepreload" crossorigin href="./assets/get-DuxuLRGI.js">
+    <link rel="modulepreload" crossorigin href="./assets/_baseSet-DehVzRp6.js">
+    <link rel="modulepreload" crossorigin href="./assets/state-Ci7n55A9.js">
+    <link rel="modulepreload" crossorigin href="./assets/label-BOFHwHn7.js">
+    <link rel="modulepreload" crossorigin href="./assets/form-Bb1JVuzT.js">
+    <link rel="modulepreload" crossorigin href="./assets/textarea-Bn1AMfsk.js">
+    <link rel="modulepreload" crossorigin href="./assets/refresh-ccw-neWzNbg7.js">
+    <link rel="modulepreload" crossorigin href="./assets/form-CRSnWxLR.js">
+    <link rel="modulepreload" crossorigin href="./assets/renderShortcut-C6HKXhBl.js">
+    <link rel="modulepreload" crossorigin href="./assets/useBoolean-CgN_4RAl.js">
+    <link rel="modulepreload" crossorigin href="./assets/markdown-export-D-ZHIs71.js">
+    <link rel="modulepreload" crossorigin href="./assets/useDeepCompareMemoize-CbFVGT0j.js">
+    <link rel="modulepreload" crossorigin href="./assets/types-D0D7HkQV.js">
+    <link rel="modulepreload" crossorigin href="./assets/semaphore-X3ApuO41.js">
+    <link rel="modulepreload" crossorigin href="./assets/fileToBase64-CBP8Y0AP.js">
+    <link rel="modulepreload" crossorigin href="./assets/pathUtils-BCwK34YQ.js">
+    <link rel="modulepreload" crossorigin href="./assets/prop-types-BH1URye0.js">
+    <link rel="modulepreload" crossorigin href="./assets/es-dmMPFhRH.js">
+    <link rel="modulepreload" crossorigin href="./assets/_hasPath-D0QK37mF.js">
+    <link rel="modulepreload" crossorigin href="./assets/hasIn-DrYqVooW.js">
+    <link rel="modulepreload" crossorigin href="./assets/pick-Q2hMHnmn.js">
+    <link rel="modulepreload" crossorigin href="./assets/code-xml-COekUbUT.js">
+    <link rel="modulepreload" crossorigin href="./assets/globe-C2tUp3NL.js">
+    <link rel="modulepreload" crossorigin href="./assets/square-DVd8Y612.js">
+    <link rel="modulepreload" crossorigin href="./assets/triangle-alert-DGiOSARf.js">
+    <link rel="modulepreload" crossorigin href="./assets/bundle.esm-DTvm8QXy.js">
+    <link rel="stylesheet" crossorigin href="./assets/cells-BE1kpmPF.css">
+    <link rel="stylesheet" crossorigin href="./assets/markdown-renderer-DdDKmWlR.css">
+    <link rel="stylesheet" crossorigin href="./assets/JsonOutput-BQtz7-np.css">
+    <link rel="stylesheet" crossorigin href="./assets/index-WoaGtlKd.css">
+  <marimo-wasm hidden=""></marimo-wasm>
+    <script>
+        if (window.location.protocol === 'file:') {
+            alert('Warning: This file must be served by an HTTP server to function correctly.');
+        }
+    </script>
+    
+    <style>
+        #save-button {
+            display: none !important;
+        }
+        #filename-input {
+            display: none !important;
+        }
+    </style>
+    
+<script data-marimo="true">
+    Object.defineProperty(window, "__MARIMO_EXPORT_CONTEXT__", {
+        value: Object.freeze({
+            trusted: true,
+            notebookCode: "import marimo\n\n__generated_with = \"0.24.0\"\napp = marimo.App()\n\n\n@app.cell\ndef _():\n    import marimo as mo\n    import pandas as pd\n    import plotly.express as px\n    from plotly.subplots import make_subplots\n\n    return make_subplots, mo, pd, px\n\n\n@app.cell\ndef _(pd):\n    df = pd.read_csv('schoolsubjects.csv', index_col=0)\n    df.index.name = 'Initial'\n    df\n    return (df,)\n\n\n@app.cell\ndef _(px):\n    def notebook_vis(subject, source_df):\n        subject = str.lower(subject)\n        subject_counts = source_df[str(subject).capitalize()].value_counts()\n        color_map = {\n            \"red\": \"#ED2F39\",\n            \"blue\": \"#0487D7\",\n            \"green\": \"#5BB515\",\n            \"yellow\": \"#DACF00\",\n            \"purple\": \"#5B45B0\",\n            \"orange\": \"#D47D3B\",\n            \"black\": \"#3B423D\",\n            \"white\": \"#E4E4E4\",\n        }\n        fig = px.treemap(\n            subject_counts,\n            path=[subject_counts.index],\n            values=subject_counts.values,\n            color=subject_counts.index,\n            custom_data=[subject_counts.index.str.capitalize()],\n            color_discrete_map=color_map,\n            width=425,\n            height=550,\n        )\n        fig.update_traces(\n            tiling=dict(pad=0),\n            marker=dict(line=dict(width=0)),\n            pathbar=dict(visible=False),\n            maxdepth=1,\n            textinfo='none',\n            hovertemplate=(\n                \"\u003Cb\u003E%{customdata[0]}\u003C/b\u003E\u003Cbr\u003E\"\n                \"Votes: %{value}\u003Cbr\u003E\"\n                \"Share: %{percentParent:.1%}\"\n                \"\u003Cextra\u003E\u003C/extra\u003E\"\n            ),\n        )\n        fig.add_annotation(\n            text=str(subject).capitalize(),\n            showarrow=False,\n            font=dict(family='Ink Free', size=50, color='black'),\n        )\n        return fig\n\n\n    return (notebook_vis,)\n\n\n@app.cell\ndef _(df, make_subplots, mo, notebook_vis):\n    subjects = ['math', 'english', 'science', 'history']\n\n    def prettify_notebooks(df):\n        figs = [notebook_vis(subject, df) for subject in subjects]\n        spacing = 0.025\n        subplot_width = (1 - spacing * (len(figs) - 1)) / len(figs)\n\n        fig = make_subplots(\n            rows=1,\n            cols=len(figs),\n            specs=[[{'type': 'domain'}] * len(figs)],\n            horizontal_spacing=spacing,\n        )\n\n        for position, (subject, plot) in enumerate(zip(subjects, figs), start=1):\n            fig.add_trace(plot.data[0], row=1, col=position)\n            left_edge = (position-1) * (subplot_width + spacing)\n            center = subplot_width / 2 + left_edge\n\n            fig.add_annotation(\n                text=subject.capitalize(),\n                y=.9,\n                x=center,\n                xref='paper',\n                yref='paper',\n                yanchor='top',\n                xanchor='center',\n                align='center',\n                showarrow=False,\n                font=dict(family='Ink Free', size=30, color='black', weight='bold'),\n            )\n\n            oval_width = 0.018\n            oval_height = 0.03\n            oval_x = left_edge + .002\n\n            for oval_number in range(46):\n                oval_center_y = .04 + oval_number * 0.0195\n\n                fig.add_shape(\n                    type=\"circle\",\n                    x0=oval_x,\n                    x1=oval_x + oval_width,\n                    y0=oval_center_y - oval_height / 2,\n                    y1=oval_center_y + oval_height / 2,\n                    xref=\"paper\",\n                    yref=\"paper\",\n                    line=dict(color=\"#333333\", width=1),\n                )\n\n        fig.update_layout(\n            width=1000,\n            height=400,\n            paper_bgcolor='white',\n            plot_bgcolor='white',\n            margin=dict(t=40, l=20, r=20, b=10),\n            showlegend=False,\n            title='Main Tank Subject Colors'\n        )\n        return fig\n\n    # fig.write_html('MT School Subject Colors.html')\n\n    interactive_fig = mo.ui.plotly(prettify_notebooks(df))\n    interactive_fig\n    return interactive_fig, prettify_notebooks, subjects\n\n\n@app.cell\ndef _(interactive_fig, subjects):\n    selection = interactive_fig.value\n    if selection:\n        clicked = selection[0]\n        subject_name = subjects[clicked['curveNumber']].capitalize()\n        color= clicked['label']\n    else:\n        subject_name = None\n        color = None\n\n    subject_name, color\n    return color, subject_name\n\n\n@app.cell\ndef _(color, df, subject_name):\n    if subject_name and color:\n        filtered_df = df[df[subject_name] == color]\n    else:\n        filtered_df = df\n\n    filtered_df\n    return (filtered_df,)\n\n\n@app.cell\ndef _(filtered_df, prettify_notebooks):\n    prettify_notebooks(filtered_df)\n    return\n\n\n@app.cell\ndef _():\n    return\n\n\n@app.cell\ndef _():\n    return\n\n\nif __name__ == \"__main__\":\n    app.run()\n",
+        }),
+        writable: false,
+        configurable: false,
+    });
+</script>
+<marimo-code hidden="">import%20marimo%0A%0A__generated_with%20%3D%20%220.24.0%22%0Aapp%20%3D%20marimo.App()%0A%0A%0A%40app.cell%0Adef%20_()%3A%0A%20%20%20%20import%20marimo%20as%20mo%0A%20%20%20%20import%20pandas%20as%20pd%0A%20%20%20%20import%20plotly.express%20as%20px%0A%20%20%20%20from%20plotly.subplots%20import%20make_subplots%0A%0A%20%20%20%20return%20make_subplots%2C%20mo%2C%20pd%2C%20px%0A%0A%0A%40app.cell%0Adef%20_(pd)%3A%0A%20%20%20%20df%20%3D%20pd.read_csv('schoolsubjects.csv'%2C%20index_col%3D0)%0A%20%20%20%20df.index.name%20%3D%20'Initial'%0A%20%20%20%20df%0A%20%20%20%20return%20(df%2C)%0A%0A%0A%40app.cell%0Adef%20_(px)%3A%0A%20%20%20%20def%20notebook_vis(subject%2C%20source_df)%3A%0A%20%20%20%20%20%20%20%20subject%20%3D%20str.lower(subject)%0A%20%20%20%20%20%20%20%20subject_counts%20%3D%20source_df%5Bstr(subject).capitalize()%5D.value_counts()%0A%20%20%20%20%20%20%20%20color_map%20%3D%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%22red%22%3A%20%22%23ED2F39%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22blue%22%3A%20%22%230487D7%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22green%22%3A%20%22%235BB515%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22yellow%22%3A%20%22%23DACF00%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22purple%22%3A%20%22%235B45B0%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22orange%22%3A%20%22%23D47D3B%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22black%22%3A%20%22%233B423D%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22white%22%3A%20%22%23E4E4E4%22%2C%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20fig%20%3D%20px.treemap(%0A%20%20%20%20%20%20%20%20%20%20%20%20subject_counts%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20path%3D%5Bsubject_counts.index%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20values%3Dsubject_counts.values%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20color%3Dsubject_counts.index%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20custom_data%3D%5Bsubject_counts.index.str.capitalize()%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20color_discrete_map%3Dcolor_map%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20width%3D425%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20height%3D550%2C%0A%20%20%20%20%20%20%20%20)%0A%20%20%20%20%20%20%20%20fig.update_traces(%0A%20%20%20%20%20%20%20%20%20%20%20%20tiling%3Ddict(pad%3D0)%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20marker%3Ddict(line%3Ddict(width%3D0))%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20pathbar%3Ddict(visible%3DFalse)%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20maxdepth%3D1%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20textinfo%3D'none'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20hovertemplate%3D(%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22%3Cb%3E%25%7Bcustomdata%5B0%5D%7D%3C%2Fb%3E%3Cbr%3E%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22Votes%3A%20%25%7Bvalue%7D%3Cbr%3E%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22Share%3A%20%25%7BpercentParent%3A.1%25%7D%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22%3Cextra%3E%3C%2Fextra%3E%22%0A%20%20%20%20%20%20%20%20%20%20%20%20)%2C%0A%20%20%20%20%20%20%20%20)%0A%20%20%20%20%20%20%20%20fig.add_annotation(%0A%20%20%20%20%20%20%20%20%20%20%20%20text%3Dstr(subject).capitalize()%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20showarrow%3DFalse%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20font%3Ddict(family%3D'Ink%20Free'%2C%20size%3D50%2C%20color%3D'black')%2C%0A%20%20%20%20%20%20%20%20)%0A%20%20%20%20%20%20%20%20return%20fig%0A%0A%0A%20%20%20%20return%20(notebook_vis%2C)%0A%0A%0A%40app.cell%0Adef%20_(df%2C%20make_subplots%2C%20mo%2C%20notebook_vis)%3A%0A%20%20%20%20subjects%20%3D%20%5B'math'%2C%20'english'%2C%20'science'%2C%20'history'%5D%0A%0A%20%20%20%20def%20prettify_notebooks(df)%3A%0A%20%20%20%20%20%20%20%20figs%20%3D%20%5Bnotebook_vis(subject%2C%20df)%20for%20subject%20in%20subjects%5D%0A%20%20%20%20%20%20%20%20spacing%20%3D%200.025%0A%20%20%20%20%20%20%20%20subplot_width%20%3D%20(1%20-%20spacing%20*%20(len(figs)%20-%201))%20%2F%20len(figs)%0A%0A%20%20%20%20%20%20%20%20fig%20%3D%20make_subplots(%0A%20%20%20%20%20%20%20%20%20%20%20%20rows%3D1%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20cols%3Dlen(figs)%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20specs%3D%5B%5B%7B'type'%3A%20'domain'%7D%5D%20*%20len(figs)%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20horizontal_spacing%3Dspacing%2C%0A%20%20%20%20%20%20%20%20)%0A%0A%20%20%20%20%20%20%20%20for%20position%2C%20(subject%2C%20plot)%20in%20enumerate(zip(subjects%2C%20figs)%2C%20start%3D1)%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20fig.add_trace(plot.data%5B0%5D%2C%20row%3D1%2C%20col%3Dposition)%0A%20%20%20%20%20%20%20%20%20%20%20%20left_edge%20%3D%20(position-1)%20*%20(subplot_width%20%2B%20spacing)%0A%20%20%20%20%20%20%20%20%20%20%20%20center%20%3D%20subplot_width%20%2F%202%20%2B%20left_edge%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20fig.add_annotation(%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20text%3Dsubject.capitalize()%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20y%3D.9%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20x%3Dcenter%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20xref%3D'paper'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20yref%3D'paper'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20yanchor%3D'top'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20xanchor%3D'center'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20align%3D'center'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20showarrow%3DFalse%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20font%3Ddict(family%3D'Ink%20Free'%2C%20size%3D30%2C%20color%3D'black'%2C%20weight%3D'bold')%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20)%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20oval_width%20%3D%200.018%0A%20%20%20%20%20%20%20%20%20%20%20%20oval_height%20%3D%200.03%0A%20%20%20%20%20%20%20%20%20%20%20%20oval_x%20%3D%20left_edge%20%2B%20.002%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20for%20oval_number%20in%20range(46)%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20oval_center_y%20%3D%20.04%20%2B%20oval_number%20*%200.0195%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20fig.add_shape(%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20type%3D%22circle%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20x0%3Doval_x%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20x1%3Doval_x%20%2B%20oval_width%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20y0%3Doval_center_y%20-%20oval_height%20%2F%202%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20y1%3Doval_center_y%20%2B%20oval_height%20%2F%202%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20xref%3D%22paper%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20yref%3D%22paper%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20line%3Ddict(color%3D%22%23333333%22%2C%20width%3D1)%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20)%0A%0A%20%20%20%20%20%20%20%20fig.update_layout(%0A%20%20%20%20%20%20%20%20%20%20%20%20width%3D1000%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20height%3D400%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20paper_bgcolor%3D'white'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20plot_bgcolor%3D'white'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20margin%3Ddict(t%3D40%2C%20l%3D20%2C%20r%3D20%2C%20b%3D10)%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20showlegend%3DFalse%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20title%3D'Main%20Tank%20Subject%20Colors'%0A%20%20%20%20%20%20%20%20)%0A%20%20%20%20%20%20%20%20return%20fig%0A%0A%20%20%20%20%23%20fig.write_html('MT%20School%20Subject%20Colors.html')%0A%0A%20%20%20%20interactive_fig%20%3D%20mo.ui.plotly(prettify_notebooks(df))%0A%20%20%20%20interactive_fig%0A%20%20%20%20return%20interactive_fig%2C%20prettify_notebooks%2C%20subjects%0A%0A%0A%40app.cell%0Adef%20_(interactive_fig%2C%20subjects)%3A%0A%20%20%20%20selection%20%3D%20interactive_fig.value%0A%20%20%20%20if%20selection%3A%0A%20%20%20%20%20%20%20%20clicked%20%3D%20selection%5B0%5D%0A%20%20%20%20%20%20%20%20subject_name%20%3D%20subjects%5Bclicked%5B'curveNumber'%5D%5D.capitalize()%0A%20%20%20%20%20%20%20%20color%3D%20clicked%5B'label'%5D%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20subject_name%20%3D%20None%0A%20%20%20%20%20%20%20%20color%20%3D%20None%0A%0A%20%20%20%20subject_name%2C%20color%0A%20%20%20%20return%20color%2C%20subject_name%0A%0A%0A%40app.cell%0Adef%20_(color%2C%20df%2C%20subject_name)%3A%0A%20%20%20%20if%20subject_name%20and%20color%3A%0A%20%20%20%20%20%20%20%20filtered_df%20%3D%20df%5Bdf%5Bsubject_name%5D%20%3D%3D%20color%5D%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20filtered_df%20%3D%20df%0A%0A%20%20%20%20filtered_df%0A%20%20%20%20return%20(filtered_df%2C)%0A%0A%0A%40app.cell%0Adef%20_(filtered_df%2C%20prettify_notebooks)%3A%0A%20%20%20%20prettify_notebooks(filtered_df)%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_()%3A%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_()%3A%0A%20%20%20%20return%0A%0A%0Aif%20__name__%20%3D%3D%20%22__main__%22%3A%0A%20%20%20%20app.run()%0A</marimo-code></head>
+  <body>
+    <div id="root"></div>
+    <script data-marimo="true">
+      Object.defineProperty(window, "__MARIMO_MOUNT_CONFIG__", {
+        value: Object.freeze({
+            "filename": "notebook.py",
+            "cwd": "",
+            "lspWorkspace": null,
+            "mode": "read",
+            "version": "0.24.0",
+            "serverToken": "unused",
+            "config": {"ai": {"custom_providers": {}, "enabled": true, "models": {"custom_models": [], "displayed_models": []}}, "completion": {"activate_on_typing": true, "auto_close_pairs": true, "copilot": false, "signature_hint_on_typing": false}, "diagnostics": {"sql_linter": true}, "display": {"cell_output": "below", "code_editor_font_size": 14, "code_lens": true, "dataframes": "rich", "default_table_max_columns": 50, "default_table_page_size": 10, "default_width": "medium", "reference_highlighting": true, "theme": "light"}, "formatting": {"line_length": 79}, "keymap": {"overrides": {}, "preset": "default"}, "language_servers": {"pylsp": {"enable_flake8": false, "enable_mypy": true, "enable_pydocstyle": false, "enable_pyflakes": false, "enable_pylint": false, "enable_ruff": true, "enabled": false}}, "mcp": {"mcpServers": {}, "presets": []}, "package_management": {"manager": "pip"}, "runtime": {"auto_instantiate": false, "auto_reload": "off", "default_csv_encoding": "utf-8", "default_sql_output": "auto", "on_cell_change": "autorun", "output_max_bytes": 8000000, "reactive_tests": true, "show_tracebacks": false, "std_stream_max_bytes": 1000000, "watcher_on_save": "lazy"}, "save": {"autosave": "off", "autosave_delay": 1000, "format_on_save": false}, "server": {"browser": "default", "follow_symlink": false}, "snippets": {"custom_paths": [], "include_default_snippets": true}},
+            "configOverrides": {},
+            "appConfig": {"sql_output": "auto", "width": "compact"},
+            "view": {"showAppCode": false},
+            "notebook": null,
+            "session": null,
+            "runtimeConfig": null,
+        }),
+        writable: false,
+        configurable: false,
+      });
+    </script>
+  </body>
+</html>
