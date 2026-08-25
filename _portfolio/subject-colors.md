@@ -3,7 +3,7 @@ title: "School Subject Color Preferences"
 layout: single
 excerpt: "A quick and fun visualization of personal color preferences for school subjects."
 header:
-    teaser: /assets/images/subject-colors-teaser.png
+    teaser: /assets/images/subject-color-teaser.png
 ---
 ## Overview
 
