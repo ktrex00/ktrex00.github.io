@@ -12,3 +12,6 @@ collections:
   portfolio:
     output: true
     permalink: /:collection/:path/
+
+include:
+  - "subject-colors/assets"
