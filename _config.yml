@@ -14,8 +14,4 @@ collections:
     permalink: /:collection/:path/
 
 include:
-  - "subject-colors/assets/_initCloneObject-700ScFCJ.js"
-  - "subject-colors/assets/_baseSet-DehVzRp6.js"
-  - "subject-colors/assets/_hasPath-D0QK37mF.js"
-  - "subject-colors/assets/__vite-browser-external-DeX3BBVP.js"
-  - "subject-colors/assets/__vite-browser-external-mTzvI0UM.js"
+  - "subject-colors"
