@@ -14,4 +14,4 @@ collections:
     permalink: /:collection/:path/
 
 include:
-  - "subject-colors"
+  - "assets"
