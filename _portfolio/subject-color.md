@@ -9,4 +9,6 @@ header:
 
 This project was just a fun side objective based on an opinion poll in my workplace. The question was simply "Which color notebook/folder do you use for each subject?" The notebooks show the general distribution of colors per subject, and clicking a color will filter the other notebooks to show a subset of the data.
 
-<iframe src="/subject-color/MT School Subject Colors.html" width="175%" height="480"></iframe>
+<center>
+<iframe src="/subject-color/MT School Subject Colors.html" width="160%" height="420"></iframe>
+</center>
