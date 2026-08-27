@@ -75,3 +75,10 @@ html {
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
+
+.iframe-wrapper {
+  position: relative;
+  left: 50%;
+  width: fit-content;
+  transform: translateX(-50%);
+}
