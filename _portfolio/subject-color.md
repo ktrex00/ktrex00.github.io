@@ -12,7 +12,7 @@ This project was just a fun side objective based on an opinion poll in my workpl
 
 The ratios are presented in a format similar to a school college-ruled notebook. 
 
-This visualization was created by taking a .csv of the results, analyzing them using pandas, and visualizing them with the plotly library.
+This visualization was created by taking a .csv of the results, analyzing them using pandas, and visualizing them with the plotly library. Marimo was used in the notebook setup
 
 
 <div style="height:400px; width:700px;">                        <div style="height:400px; width:700px;">                        <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
