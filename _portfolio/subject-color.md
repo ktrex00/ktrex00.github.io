@@ -4,6 +4,7 @@ layout: single
 excerpt: "A quick and fun visualization of personal color preferences for school subjects."
 header:
     teaser: /assets/images/subject-color-teaser.png
+published: false
 ---
 <!-- markdownlint-disable MD033 -->
 ## Overview
@@ -12,7 +13,7 @@ This project was just a fun side objective based on an opinion poll in my workpl
 
 The ratios are presented in a format similar to a school college-ruled notebook. 
 
-This visualization was created by taking a .csv of the results, analyzing them using pandas, and visualizing them with the plotly library. Marimo was used in the notebook setup
+This visualization was created by taking a .csv of the results, analyzing them using pandas, and visualizing them with the plotly library. Marimo was used in the notebook setup to leverage the use of interactive cells. 
 
 
 <div style="height:400px; width:700px;">                        <div style="height:400px; width:700px;">                        <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
