@@ -5,7 +5,8 @@
 
     <div>
         <marimo-iframe data-show-code="false">
-            <pre><code class="language-python">import marimo as mo
+            <pre><code class="language-python">
+import marimo as mo
 import pandas as pd
 import plotly.express as px
 from plotly.subplots import make_subplots
@@ -47,11 +48,11 @@ def notebook_vis(subject, source_df):
         maxdepth=1,
         textinfo='none',
         hovertemplate=(
-            "<b>%{customdata[0]}</b><br>"
-            "Votes: %{value}<br>"
-            "Share: %{percentParent:.1%}<br>"
+            "&lt;b&gt;%{customdata[0]}&lt;/b&gt;&lt;br&gt;"
+            "Votes: %{value}&lt;br&gt;"
+            "Share: %{percentParent:.1%}&lt;br&gt;"
             "Users: %{customdata[1]}"
-            "<extra></extra>"
+            "&lt;extra&gt;&lt;/extra&gt;"
         ),
     )
     fig.add_annotation(
@@ -161,7 +162,6 @@ def handle_click(selection):
 
 interactive_fig = mo.ui.plotly(base_fig, on_change=handle_click)
 interactive_fig
-
             </code></pre>
         </marimo-iframe>
     </div>
