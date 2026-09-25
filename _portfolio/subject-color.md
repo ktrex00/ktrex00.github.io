@@ -14,7 +14,7 @@ This project was a fun side objective based on an opinion poll in my workplace. 
 
 The color ratios are presented in a format similar to a school college-ruled notebook.
 
-<iframe src="/subject-color_wasm_output/index.html"></iframe>
+<iframe src="apps\school-colors\wasm_output\index.html"></iframe>
 
 ## Tools Used
 Pandas was used for the initial import of the .csv file into a Marimo notebook, along with ensuring proper datatypes, setting and labeling an index, and grouping subject colors. Marimo was chosen specifically because of the feature allowing for cells to update in real time. The goal was to allow the visualization to update the rest of the 'notebooks' when a color is selected. For example, if Red is selected for Science, the other notebooks should show the range of colors for anyone who picked Red for Science. 
