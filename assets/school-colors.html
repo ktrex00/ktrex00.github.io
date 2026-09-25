@@ -10,10 +10,12 @@ import marimo as mo
 import pandas as pd
 import plotly.express as px
 from plotly.subplots import make_subplots
-
+            </code></pre>
+            <pre><code class="language-python"></code>
 df = pd.read_csv("https://ktrex00.github.io/assets/schoolsubjects.csv", index_col=0)
 df.index.name = 'Initial'
-
+            </code></pre>
+            <pre><code class="language-python"></code>
 def notebook_vis(subject, source_df):
     subject = str.lower(subject)
     subject_counts = source_df[str(subject).capitalize()].value_counts()
@@ -61,7 +63,8 @@ def notebook_vis(subject, source_df):
         font=dict(family='Ink Free', size=50, color='black'),
     )
     return fig
-
+            </code></pre>
+            <pre><code class="language-python"></code>
 subjects = ['math', 'english', 'science', 'history']
 
 def prettify_notebooks(subject_dfs):
@@ -124,7 +127,8 @@ def prettify_notebooks(subject_dfs):
     # fig.write_html('MT School Subject Colors.html', full_html=False, include_plotlyjs='cdn')
 
     return fig
-
+            </code></pre>
+            <pre><code class="language-python"></code>
 get_filters, set_filters = mo.state({}, allow_self_loops=True)
 def apply_filters(df, filters):
     filtered = df
@@ -141,7 +145,8 @@ def build_subject_dfs(df, filters):
         else:
             subject_dfs[subject.capitalize()] = open_df
     return subject_dfs
-
+            </code></pre>
+            <pre><code class="language-python"></code>
 subject_dfs = build_subject_dfs(df, get_filters())
 base_fig = prettify_notebooks(subject_dfs)
 
@@ -159,7 +164,8 @@ def handle_click(selection):
         new_filters = {**current_filters, subject:color}
 
     set_filters(new_filters)
-
+            </code></pre>
+            <pre><code class="language-python"></code>
 interactive_fig = mo.ui.plotly(base_fig, on_change=handle_click)
 interactive_fig
             </code></pre>
