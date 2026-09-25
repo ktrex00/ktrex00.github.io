@@ -10,6 +10,9 @@ import pandas as pd
 import plotly.express as px
 from plotly.subplots import make_subplots
 
+df = pd.read_csv("https://raw.githubusercontent.com/ktrex00/ktrex00.github.io/assets/schoolsubjects.csv", index_col=0)
+df.index.name = 'Initial'
+
 def notebook_vis(subject, source_df):
     subject = str.lower(subject)
     subject_counts = source_df[str(subject).capitalize()].value_counts()
