@@ -8,6 +8,7 @@ app = marimo.App()
 def _():
     import marimo as mo
     import pandas as pd
+    import plotly
     import plotly.express as px
     from plotly.subplots import make_subplots
 
@@ -16,7 +17,7 @@ def _():
 
 @app.cell
 def _(pd):
-    df = pd.read_csv('public/schoolsubjects.csv', index_col=0)
+    df = pd.read_csv('https://ktrex00.github.io/assets/schoolsubjects.csv', index_col=0)
     df.index.name = 'Initial'
     df
     return (df,)
