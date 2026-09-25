@@ -15,7 +15,7 @@ This project was a fun side objective based on an opinion poll in my workplace. 
 
 The color ratios are presented in a format similar to a school college-ruled notebook.
 
-<iframe src="/apps/school-colors/index.html"
+<iframe src="/assets/school-colors.html"
 width="100%" 
 height="600px" 
 style="border: none;"></iframe>
