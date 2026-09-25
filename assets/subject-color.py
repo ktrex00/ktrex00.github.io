@@ -1,3 +1,11 @@
+# /// script
+# dependencies = [
+#     "marimo",
+#     "pandas",
+#     "plotly",
+# ]
+# ///
+
 import marimo
 
 __generated_with = "0.24.2"
