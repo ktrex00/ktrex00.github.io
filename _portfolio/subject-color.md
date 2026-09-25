@@ -17,7 +17,7 @@ The color ratios are presented in a format similar to a school college-ruled not
 
 <iframe src="/assets/school-colors.html"
 width="100%" 
-height="600px" 
+height="700px" 
 style="border: none;"></iframe>
 
 ## Tools Used

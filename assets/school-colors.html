@@ -10,7 +10,7 @@ import pandas as pd
 import plotly.express as px
 from plotly.subplots import make_subplots
 
-df = pd.read_csv("https://raw.githubusercontent.com/ktrex00/ktrex00.github.io/assets/schoolsubjects.csv", index_col=0)
+df = pd.read_csv("https://ktrex00.github.io/assets/schoolsubjects.csv", index_col=0)
 df.index.name = 'Initial'
 
 def notebook_vis(subject, source_df):
