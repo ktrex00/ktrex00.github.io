@@ -19,7 +19,6 @@ def _():
 def _(pd):
     df = pd.read_csv('https://ktrex00.github.io/assets/schoolsubjects.csv', index_col=0)
     df.index.name = 'Initial'
-    df
     return (df,)
 
 
@@ -203,28 +202,6 @@ def _(
 def _(build_subject_dfs, df, prettify_notebooks):
     full_fig = prettify_notebooks(build_subject_dfs(df, {}))
     full_fig.write_html('MT School Subject Colors.html', full_html=False, include_plotlyjs='cdn')
-    return
-
-
-@app.cell
-def _():
-    # interactive_fig.write_html('MT School Subject Colors.html', full_html=False, include_plotlyjs='cdn')
-    return
-
-
-@app.cell
-def _(get_filters, mo):
-    mo.md(f"{get_filters()}")
-    return
-
-
-@app.cell
-def _():
-    return
-
-
-@app.cell
-def _():
     return
 
 
