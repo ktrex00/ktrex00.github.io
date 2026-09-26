@@ -32,3 +32,7 @@ To present the final visualization on this portfolio, an iframe was used on a ma
 ## AI Use
 
 Anthropic's Claude was used as a tool to assist with concepts and figuring out bugs. The initial idea came from myself, but Claude was used for small visual details, such as setting up the charts to look like notebooks. Code was not taken wholesale from the AI agent, but instead used as a jumping-off point.
+
+## Full Code
+
+<iframe src="https://marimo.app/github/ktrex00/ktrex00.github.io/blob/main/assets/subject-color.py?embed=true&mode=read" sandbox="allow-scripts allow-same-origin allow-downloads allow-popups allow-forms" allow="microphone" allowfullscreen width="100%" height="700" frameborder="0"></iframe>
