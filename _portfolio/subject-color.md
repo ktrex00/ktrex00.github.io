@@ -15,7 +15,7 @@ This project was a fun side objective based on an opinion poll in my workplace. 
 
 The color ratios are presented in a format similar to a school college-ruled notebook.
 
-<iframe src="https://marimo.app/github/ktrex00/ktrex00.github.io/blob/main/assets/subject-color.py/wasm?embed=true&mode=read&include-code=false" sandbox="allow-scripts allow-same-origin allow-downloads allow-popups allow-forms" allow="microphone" allowfullscreen style="width: calc(100% + 400px); margin-left: -200px; margin-right: -200px; height: 525px;" frameborder="0"></iframe>
+<iframe src="https://marimo.app/github/ktrex00/ktrex00.github.io/blob/main/assets/subject-color.py/wasm?embed=true&mode=read&include-code=false" sandbox="allow-scripts allow-same-origin allow-downloads allow-popups allow-forms" allow="microphone" allowfullscreen style="width: calc(100% + 500px); margin-left: -250px; margin-right: -250px; height: 525px;" frameborder="0"></iframe>
 
 ## Tools Used
 
