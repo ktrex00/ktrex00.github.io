@@ -140,7 +140,7 @@ def _(make_subplots, notebook_vis):
             height=400,
             paper_bgcolor='white',
             plot_bgcolor='white',
-            margin=dict(t=20, l=10, r=10, b=5),
+            margin=dict(t=40, l=10, r=10, b=5),
             showlegend=False,
             title='Team Subject Colors'
         )
