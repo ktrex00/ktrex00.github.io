@@ -13,7 +13,7 @@ published: true
 
 This project was a fun side objective based on an opinion poll in my workplace. The question was simply "Which color notebook or folder do you use for each school subject?".
 
-The color ratios are presented in a format similar to a school college-ruled notebook.
+The color ratios are presented in a format similar to a college-ruled school notebook.
 
 <iframe src="https://marimo.app/github/ktrex00/ktrex00.github.io/blob/main/assets/subject-color.py/wasm?embed=true&mode=read&include-code=false" sandbox="allow-scripts allow-same-origin allow-downloads allow-popups allow-forms" allow="microphone" allowfullscreen style="width: calc(100% + 500px); margin-left: -250px; margin-right: -250px; height: 525px;" frameborder="0"></iframe>
 
@@ -34,8 +34,8 @@ To present the final visualization on this portfolio, an iframe was used on a ma
 
 ## AI Use
 
-Anthropic's Claude was used as a tool to assist with concepts and figuring out bugs. The initial idea came from myself, but Claude was used for small visual details, such as setting up the charts to look like notebooks. Code was not taken wholesale from the AI agent, but instead used as a jumping-off point.
+Anthropic's Claude was used as a tool to assist with concepts and figuring out bugs, along with navigating a new pipeline. The initial idea and design came from myself, but Claude was used for collaborative review and assistance in implementing new ideas. For example, the technical issues involved in including the output visualization on this portfolio page. Code was not taken wholesale from the AI agent, but instead used as a guide.
 
 ## Full Code
 
-<iframe src="https://marimo.app/github/ktrex00/ktrex00.github.io/blob/main/assets/subject-color.py?embed=true&mode=read" sandbox="allow-scripts allow-same-origin allow-downloads allow-popups allow-forms" allow="microphone" allowfullscreen width="100%" height="700" frameborder="0"></iframe>
+<iframe src="https://marimo.app/github/ktrex00/ktrex00.github.io/blob/main/assets/files/subject-color.py?embed=true&mode=read" sandbox="allow-scripts allow-same-origin allow-downloads allow-popups allow-forms" allow="microphone" allowfullscreen width="100%" height="700" frameborder="0"></iframe>
