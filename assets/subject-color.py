@@ -6,7 +6,7 @@
 # ]
 # ///
 
-import marimo as mo
+import marimo
 
 __generated_with = "0.24.2"
 app = marimo.App()
@@ -204,14 +204,6 @@ def _(
     interactive_fig = mo.ui.plotly(base_fig, on_change=handle_click)
     interactive_fig
     return
-
-
-@app.cell
-def _(build_subject_dfs, df, prettify_notebooks):
-    full_fig = prettify_notebooks(build_subject_dfs(df, {}))
-    full_fig.write_html('MT School Subject Colors.html', full_html=False, include_plotlyjs='cdn')
-    return
-
 
 if __name__ == "__main__":
     app.run()
