@@ -5,7 +5,7 @@ excerpt: "A quick and fun visualization of personal color preferences for school
 header:
     teaser: /assets/images/subject-color-teaser.png
 toc: true
-published: true
+published: false
 ---
 <!-- markdownlint-disable MD033 -->
 
@@ -21,7 +21,7 @@ The color ratios are presented in a format similar to a college-ruled school not
 
 Pandas was used for the initial import of the .csv file into a Marimo notebook, along with ensuring proper datatypes, setting and labeling an index, and grouping subject colors. Marimo was chosen specifically because of the feature allowing for cells to update in real time. The goal was to allow the visualization to update the rest of the 'notebooks' when a color is selected. For example, if Red is selected for Science, the other notebooks should show the range of colors for anyone who picked Red for Science.
 
-Because a goal of this project was to filter multiple views, marimo, with its reactive execution, seemed like the right fit. Ultimately, the base cell reactivity did not work as hoped. The visual had to be split into two separate visuals, with the second depending on selections in the first. This was not the intended effect, so research continued to create a functional, cohesive visualization that would update itself. 
+Because a goal of this project was to filter multiple views, marimo, with its reactive execution, seemed like the right fit. Ultimately, the base cell reactivity did not work as hoped. The visual had to be split into two separate visuals, with the second depending on selections in the first. This was not the intended effect, so research continued to create a functional, cohesive visualization that would update itself.
 This problem was solved eventually by using the mo.state() function. This allowed the visualization to hold its state outside of the cell, rather than only being dependent on another cell. Now, when a color is selected, that state can hold a dictionary of the 'locked' subjects (ie: Math to Red and English to Blue) to a color to allow for proper filtering of the remaining colors.
 
 Another benefit to a marimo notebook is the ability to run as an encapsulated notebook on its own, ideal for presenting in a portfolio such as this. The full notebook is presented at the bottom of the page.
