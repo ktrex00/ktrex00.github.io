@@ -10,7 +10,7 @@ published: true
 ---
 
 <div class="iframe-container" style="position: relative; width: 100%; height: 600px; margin-bottom: 2em;">
-  <iframe src="{{ '/assets/telcochurnnb.html' | relative_url }}" 
+  <iframe src="{{ '/assets/files/telcochurnnb.html' | relative_url }}" 
           width="100%" 
           height="100%" 
           style="border: 1px solid #e5e5e5; border-radius: 4px; background-color: #fff;" 
