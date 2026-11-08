@@ -6,7 +6,7 @@ hide_masthead: true
 header:
     teaser: /assets/images
 toc: true
-published: false
+published: true
 ---
 
 <div class="iframe-container" style="position: relative; width: 100%; height: 600px; margin-bottom: 2em;">
