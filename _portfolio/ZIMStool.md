@@ -6,6 +6,11 @@ hide_masthead: true
 header:
     teaser: /assets/images/ZIMStool-crop.png
 toc: true
+tags:
+    - Python
+    - Flet
+    - Data Preparation
+    - Excel
 ---
 ## Project Overview
 
